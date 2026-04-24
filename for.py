@@ -30,10 +30,10 @@
 # else:
 #     print("Alumno Reprovado")
 #sumatoria
+# num=int(input("Ingrese la cantidad de notas: "))
+# total=0
+# for i in range(1, num+1):
+#     total+=i+1
+# print(f"El resultado total es {total}")
 #factorial
 
-num=int(input("Ingrese la cantidad de notas: "))
-total=0
-for i in range(1, num+1):
-    total+=i+1
-print(f"El resultado total es {total}")
