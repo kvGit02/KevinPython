@@ -17,7 +17,7 @@
 #Pedir al usuario la cantidad de notas 
 #Mostrar el promedio de las notas ingresadas
 #4notas
-notas =int(input("Ingrese la cantidad de notas: "))
+notas = int(input("Ingrese la cantidad de notas: "))
 suma=0
 for i in range(notas):
     n=float(input(f"Ingrese la nota {i+1}: "))
