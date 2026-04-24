@@ -17,15 +17,23 @@
 #Pedir al usuario la cantidad de notas 
 #Mostrar el promedio de las notas ingresadas
 #4notas
-notas = int(input("Ingrese la cantidad de notas: "))
-suma=0
-for i in range(notas):
-    n=float(input(f"Ingrese la nota {i+1}: "))
-    suma=suma+n
-prom=suma/notas
-print("El promedio es", round(prom,1))
+# notas = int(input("Ingrese la cantidad de notas: "))
+# suma=0
+# for i in range(notas):
+#     n=float(input(f"Ingrese la nota {i+1}: "))
+#     suma=suma+n
+# prom=suma/notas
+# print("El promedio es", round(prom,1))
 
-if prom>=4:
-    print("Alumno aprobado")
-else:
-    print("Alumno Reprovado")
+# if prom>=4:
+#     print("Alumno aprobado")
+# else:
+#     print("Alumno Reprovado")
+#sumatoria
+#factorial
+
+num=int(input("Ingrese la cantidad de notas: "))
+total=0
+for i in range(1, num+1):
+    total+=i+1
+print(f"El resultado total es {total}")
