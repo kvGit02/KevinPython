@@ -2,7 +2,7 @@
 # Las opciones disponibles deben estar construidas de la siguiente forma:
 # 1.	Pago de Tarjeta de Crédito:
 # a.	El usuario comienza con una deuda de $100.000
-# b.	El usuario puede ingresar un monto para realizar un pago en la tarje-ta de crédito.
+# b.	El usuario puede ingresar un monto para realizar un pago en la tarjeta de crédito.
 # c.	Se debe verificar que el monto ingresado sea mayor o igual a cero.
 # d.	Se debe verificar que el monto a pagar no exceda la deuda actual de la tarjeta.
 # e.	Al pagar el sistema debe descontar de la deuda total
@@ -37,5 +37,10 @@ while op !=4:
                         
 
 
-    except ValueError:
-        print("Debe de ser un numero mayor a 0!!!!!!!!!!!!")
+                except ValueError:
+                    print("Debe de ser un numero mayor a 0!!!!!!!!!!!!")
+        elif op == 2:
+            valor = int(input("Ingrese el valor de la compra: "))
+            pass
+    except:
+        break
