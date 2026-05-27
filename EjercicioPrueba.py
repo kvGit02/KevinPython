@@ -42,4 +42,3 @@ while True:
             print("El nombre no debe contener espacios")
     else:
         print("El largo del nombre de registro debe de ser de 6 caracteres y sin espacios")
-
