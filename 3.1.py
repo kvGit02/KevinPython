@@ -26,4 +26,3 @@ while True:
                 pass
         else:
             print("Opcion invalida, Intente denuevo")
-                        
