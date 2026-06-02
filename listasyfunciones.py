@@ -62,3 +62,46 @@ for caracter in texto:
     else:
         frecuencias[caracter] = 1
 print("Frecuencias de caracteres:", frecuencias)
+
+# Ejercicio 3: Filtrar alumnos aprobados
+# Enunciado: Tienes un diccionario llamado alumnos donde las claves son los nombres
+# de los estudiantes y los valores son sus calificaciones. Crea una nueva lista llamada
+# aprobados que contenga solo los nombres de los alumnos con una calificación mayor o
+# igual a 6.0.
+# Python
+# Entrada de prueba
+# alumnos = {"Ana": 7.5, "Luis": 5.0, "Pedro": 6.0, "María": 4.5,
+# "Carlos": 8.2}
+
+# Ejercicio 4: Combinar dos listas en un diccionario
+# Enunciado: Dadas dos listas de la misma longitud, claves y valores, crea un
+# diccionario llamado resultado que asocie cada elemento de la lista claves con el
+# elemento correspondiente en la lista valores utilizando sus índices.
+# Python
+# # Entrada de prueba
+# claves = ["nombre", "edad", "ciudad", "profesion"]
+# valores = ["Carlos", 25, "Madrid", "Ingeniero"]
+
+# Ejercicio 5: Encontrar el valor máximo y mínimo manualmente
+# Enunciado: Dada una lista de números llamada valores, encuentra el número más
+# grande y el más pequeño utilizando bucles y condicionales. No utilices las funciones
+# integradas max() ni min().
+# Python
+# # Entrada de prueba
+# valores = [34, 7, 23, 99, 5, 62, -2]
+
+# Ejercicio 6: Invertir un diccionario
+# Enunciado: Dado un diccionario llamado original cuyos valores son únicos, crea un
+# nuevo diccionario llamado invertido donde las claves sean los valores del diccionario
+# original y los valores sean las claves originales.
+# Python
+# # Entrada de prueba
+# original = {"a": 1, "b": 2, "c": 3, "d": 4}
+
+# Ejercicio 7: Eliminar duplicados manteniendo el orden
+# Enunciado: Dada una lista llamada elementos que contiene valores repetidos, crea una
+# nueva lista llamada unicos que guarde los elementos sin repetir, asegurándote de
+# mantener el orden original de su primera aparición.
+# Python
+# # Entrada de prueba
+# elementos = [1, 2, 2, 3, 4, 4, 1, 5, 2, 6]
