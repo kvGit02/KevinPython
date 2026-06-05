@@ -72,6 +72,13 @@ print("Frecuencias de caracteres:", frecuencias)
 # Entrada de prueba
 # alumnos = {"Ana": 7.5, "Luis": 5.0, "Pedro": 6.0, "María": 4.5,
 # "Carlos": 8.2}
+alumnos = {"Ana": 7.5, "Luis": 5.0, "Pedro": 6.0, "María": 4.5, "Carlos": 8.2}
+aprobados = []
+for nombre, calificacion in alumnos.items():
+    if calificacion >= 6.0:
+        aprobados.append(nombre)
+print("Alumnos aprobados:", aprobados)
+
 
 # Ejercicio 4: Combinar dos listas en un diccionario
 # Enunciado: Dadas dos listas de la misma longitud, claves y valores, crea un
@@ -80,8 +87,13 @@ print("Frecuencias de caracteres:", frecuencias)
 # Python
 # # Entrada de prueba
 # claves = ["nombre", "edad", "ciudad", "profesion"]
-# valores = ["Carlos", 25, "Madrid", "Ingeniero"]
-
+# valores = ["Carlos", 25, "Madrid", "Ingeniero"]}
+claves = ["nombre", "edad", "ciudad", "profesion"]
+valores = ["Carlos", 25, "Madrid", "Ingeniero"]
+resultado = {}
+for i in range(len(claves)):
+    resultado[claves[i]] = valores[i]
+print("Diccionario combinado:", resultado)
 # Ejercicio 5: Encontrar el valor máximo y mínimo manualmente
 # Enunciado: Dada una lista de números llamada valores, encuentra el número más
 # grande y el más pequeño utilizando bucles y condicionales. No utilices las funciones
@@ -89,6 +101,28 @@ print("Frecuencias de caracteres:", frecuencias)
 # Python
 # # Entrada de prueba
 # valores = [34, 7, 23, 99, 5, 62, -2]
+alumnos = {"Ana": 7.5, "Luis": 5.0, "Pedro": 6.0, "María": 4.5, "Carlos": 8.2}
+aprobados = []
+for nombre, calificacion in alumnos.items():
+    if calificacion >= 6.0:
+        aprobados.append(nombre)
+print("Alumnos aprobados:", aprobados)
+claves = ["nombre", "edad", "ciudad", "profesion"]
+valores = ["Carlos", 25, "Madrid", "Ingeniero"]
+resultado = {}
+for i in range(len(claves)):
+    resultado[claves[i]] = valores[i]
+print("Diccionario combinado:", resultado)
+valores = [34, 7, 23, 99, 5, 62, -2]
+maximo = valores[0]
+minimo = valores[0]
+for valor in valores:
+    if valor > maximo:
+        maximo = valor
+    if valor < minimo:
+        minimo = valor
+print("Valor máximo:", maximo)
+print("Valor mínimo:", minimo)
 
 # Ejercicio 6: Invertir un diccionario
 # Enunciado: Dado un diccionario llamado original cuyos valores son únicos, crea un
@@ -98,6 +132,13 @@ print("Frecuencias de caracteres:", frecuencias)
 # # Entrada de prueba
 # original = {"a": 1, "b": 2, "c": 3, "d": 4}
 
+original = {"a": 1, "b": 2, "c": 3, "d": 4}
+invertido = {}
+for clave, valor in original.items():
+    invertido[valor] = clave
+print("Diccionario invertido:", invertido)
+
+
 # Ejercicio 7: Eliminar duplicados manteniendo el orden
 # Enunciado: Dada una lista llamada elementos que contiene valores repetidos, crea una
 # nueva lista llamada unicos que guarde los elementos sin repetir, asegurándote de
@@ -105,3 +146,10 @@ print("Frecuencias de caracteres:", frecuencias)
 # Python
 # # Entrada de prueba
 # elementos = [1, 2, 2, 3, 4, 4, 1, 5, 2, 6]
+
+elementos = [1, 2, 2, 3, 4, 4, 1, 5, 2, 6]
+unicos = []
+for elemento in elementos:
+    if elemento not in unicos:
+        unicos.append(elemento)
+print("Elementos únicos manteniendo el orden:", unicos)
