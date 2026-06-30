@@ -11,7 +11,7 @@ autos = {
 operaciones = {
    #id_auto       #0              #1
     "A001" : ["01-01-2024", "12-12-2025"],
-    "A002" : ["07-08-2024", "01-08-2025"],
+    "A002" : ["07-08-2024", "Pendiente"],
     "A003" : ["09-01-2025", "Pendiente"],
     "A004" : ["24-03-2025", "Pendiente"],
     "A005" : ["24-03-2024", "24-07-2024"],
@@ -45,7 +45,7 @@ def busqueda_por_añio(añio_min, añio_max):
 
         if añio_min <= añio <= añio_max:
             if operaciones[id_auto][1] == "Pendiente":
-                elementos_encontrados.append(f"{marca}, modelo, --, {id_auto}")
+                elementos_encontrados.append(f"{marca} {modelo} -- {id_auto}")
 
     if elementos_encontrados:
         elementos_encontrados.sort()
@@ -53,5 +53,15 @@ def busqueda_por_añio(añio_min, añio_max):
         print("No se han encontrado elementos")
 
     print(id_auto)
+#test_busqueda_por_año
+while True:
+    try:
+        añio_inicio = int(input("Ingrese el año de inicio de la busqueda: "))
+        añio_termino = int(input("Ingrese el año de termino de la busqueda: "))
+        busqueda_por_añio(añio_inicio,añio_termino)
+        break
+    except:
+        print("Los años ingresados deben ser numeros enteros")
 
-busqueda_por_añio(2015, 2025)
+
+busqueda_por_añio(2005, 2025)
