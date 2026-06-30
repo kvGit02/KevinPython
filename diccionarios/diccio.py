@@ -1,6 +1,6 @@
 autos = {
-
-    "A001" : ["Toyota", "corolla", 2000, 5],
+                #0       #1        #2
+    "A001" : ["Toyota", "corolla", 2010, 5],
     "A002" : ["Ford", "Ranger", 2019,4],
     "A003" : ["Chevrolet", "Spark", 2022,4],
     "A004" : ["Suzuki", "Aerio", 2005,4],
@@ -9,14 +9,14 @@ autos = {
 }
 
 operaciones = {
-
+   #id_auto       #0              #1
     "A001" : ["01-01-2024", "12-12-2025"],
     "A002" : ["07-08-2024", "01-08-2025"],
     "A003" : ["09-01-2025", "Pendiente"],
     "A004" : ["24-03-2025", "Pendiente"],
     "A005" : ["24-03-2024", "24-07-2024"],
     "A006" : ["24-03-2024", "24-09-2024"]
-                #0           #1
+                  #0              #1
 
 }
 
@@ -33,5 +33,20 @@ def autos_vendidos_por_marca(marca):
     print(f"El numero total de autos vendidos de la marca {marca.upper()} es {total}")
 
 #main
-marca = input("Ingrese la marca a buscar: ")
-autos_vendidos_por_marca(marca)
+# marca = input("Ingrese la marca a buscar: ")
+# autos_vendidos_por_marca(marca)
+
+def busqueda_por_añio(añio_min, añio_max):
+    elementos_encontrados = []
+    for id_auto, datos in autos.items():
+        marca = datos[0]
+        modelo = datos[1]
+        añio = datos[2]
+
+        if añio_min <= añio <= añio_max:
+            if operaciones[id_auto][1] == "Pendiente":
+                elementos_encontrados.append(f"{marca}, modelo, --, {id_auto}")
+
+    print(id_auto)
+
+busqueda_por_añio(2015, 2025)
