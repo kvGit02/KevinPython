@@ -47,6 +47,11 @@ def busqueda_por_añio(añio_min, añio_max):
             if operaciones[id_auto][1] == "Pendiente":
                 elementos_encontrados.append(f"{marca}, modelo, --, {id_auto}")
 
+    if elementos_encontrados:
+        elementos_encontrados.sort()
+    else:
+        print("No se han encontrado elementos")
+
     print(id_auto)
 
 busqueda_por_añio(2015, 2025)
