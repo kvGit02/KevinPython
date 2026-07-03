@@ -7,7 +7,7 @@ autos = {
     "A005" : ["Toyota", "Yaris", 20015,5],
     "A006" : ["Chevrolet", "Impala", 1950,1]
 }
-
+#autos que no se venden estan "Pendiente"
 operaciones = {
    #id_auto       #0              #1
     "A001" : ["01-01-2024", "12-12-2025"],
@@ -19,6 +19,12 @@ operaciones = {
                   #0              #1
 
 }
+
+def muestraAutos(dic):
+    for id, vehiculo in dic.items():
+        print(f"{id}.- {vehiculo}")
+
+
 
 def autos_vendidos_por_marca(marca):
     total = 0
@@ -86,3 +92,16 @@ while True:
         break
 #Ejercicio 4:
 
+def creaAuto():
+    id = input("Ingrese el ID:")
+    marca = input("Ingrese la marca:")
+    modelo = input("Ingrese el modelo:")
+    añio = input("Ingrese el añio:")
+    ranking = input("Ingrese el ranking:")
+    fecha = input("Ingrese la fecha:")
+    autos[id] = [marca, modelo, añio, ranking]
+    operaciones[id] = [fecha, "Pendiente"]
+
+muestraAutos(autos)
+creaAuto()
+muestraAutos(autos)
