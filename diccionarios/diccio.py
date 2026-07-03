@@ -23,7 +23,7 @@ operaciones = {
 def muestraAutos(dic):
     for id, vehiculo in dic.items():
         print(f"{id}.- {vehiculo}")
-        
+
 
 
 
@@ -160,3 +160,14 @@ print("3.- ")
 print("4.- ")
 print("5.- Eliminar auto")
 print("6.- ")
+op = int(input("Seleccione una opcion: "))
+match op :
+    case 1:
+        creaAuto()
+    case 2:
+        id = input("Ingrese el ID a eliminar")
+        eliminar_auto(id)
+    case 3:
+    case 4:
+    case 5:
+    case 9:
