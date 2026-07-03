@@ -54,14 +54,35 @@ def busqueda_por_añio(añio_min, añio_max):
 
     print(id_auto)
 #test_busqueda_por_año
-while True:
-    try:
-        añio_inicio = int(input("Ingrese el año de inicio de la busqueda: "))
-        añio_termino = int(input("Ingrese el año de termino de la busqueda: "))
-        busqueda_por_añio(añio_inicio,añio_termino)
-        break
-    except:
-        print("Los años ingresados deben ser numeros enteros")
+# while True:
+#     try:
+#         añio_inicio = int(input("Ingrese el año de inicio de la busqueda: "))
+#         añio_termino = int(input("Ingrese el año de termino de la busqueda: "))
+#         busqueda_por_añio(añio_inicio,añio_termino)
+#         break
+#     except:
+#         print("Los años ingresados deben ser numeros enteros")
 
 
 busqueda_por_añio(2005, 2025)
+#Ejercicio 3:
+def actualizar_fecha_venta(id_auto, nueva_fecha):
+    if id_auto in autos:
+        operaciones[id_auto][-1]=nueva_fecha
+    else:
+        print("El id no se encuentra")
+        return False
+    
+while True:
+    id = input("Ingrese el valor del ID a actualizar")
+    fecha = input("Ingrese la fecha a actualizar")
+
+    if actualizar_fecha_venta(id, fecha):
+        print("Actualizado correctamente")
+    else:
+        print("El id no se encuentra")
+    next = input("Desea actualizar otro vehiculo (s/n)?")
+    if next.lower() == "n":
+        break
+#Ejercicio 4:
+
