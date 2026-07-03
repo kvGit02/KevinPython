@@ -92,16 +92,63 @@ while True:
         break
 #Ejercicio 4:
 
+def validaAÑio(a):
+    if a < 1900:
+        return True
+    else:
+        return False
+    
+def validaRanking(a):
+    if a <=1 and a > 5:
+        return True
+    else:
+        return False
+    
+def validString(s):
+    if "s" =="" or s ==" ":
+        return True
+    else:
+        return False
+validString("Algo")
+
+print(validaRanking(0))
 def creaAuto():
     id = input("Ingrese el ID:")
+    if validString(id):
+        print("Dato incorrecto")
+        return
     marca = input("Ingrese la marca:")
+    if validString(marca):
+        print("Dato incorrecto")
+        return
     modelo = input("Ingrese el modelo:")
+    if validString(modelo):
+        print("Dato incorrecto")
+        return
     añio = input("Ingrese el añio:")
+    if validaAÑio(añio):
+        print("El añio debe ser superior a 1900")
+        return
     ranking = input("Ingrese el ranking:")
+    if validaRanking(ranking):
+        print("El ranking tiene que ser un numero entero entre 1 y 5")
     fecha = input("Ingrese la fecha:")
     autos[id] = [marca, modelo, añio, ranking]
     operaciones[id] = [fecha, "Pendiente"]
 
+
+
 muestraAutos(autos)
 creaAuto()
 muestraAutos(autos)
+
+def eliminar_auto(id_auto):
+    if id_auto in autos:
+        del autos[id_auto]
+        del operaciones[id_auto]
+        return True
+    else:
+        return False
+    
+#Menu principal
+
