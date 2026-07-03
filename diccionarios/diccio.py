@@ -23,6 +23,7 @@ operaciones = {
 def muestraAutos(dic):
     for id, vehiculo in dic.items():
         print(f"{id}.- {vehiculo}")
+        
 
 
 
@@ -152,3 +153,10 @@ def eliminar_auto(id_auto):
     
 #Menu principal
 
+print("===MENU PRINCIPAL===")
+print("1.- Registrar nuevo auto")
+print("2.- ")
+print("3.- ")
+print("4.- ")
+print("5.- Eliminar auto")
+print("6.- ")
