@@ -1,0 +1,62 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# PROBLEMA 1
+def datos_transmitidos(tiempo):
+    return 100 * tiempo
+
+print("PROBLEMA 1")
+print("45 segundos:", datos_transmitidos(45), "megabits")
+print("1,5 minutos:", datos_transmitidos(1.5 * 60), "megabits")
+print("1 hora:", datos_transmitidos(60 * 60), "megabits")
+
+
+# PROBLEMA 2
+print("\nPROBLEMA 2")
+
+for tiempo in range(0, 1001, 100):
+    print(tiempo, "segundos:", datos_transmitidos(tiempo), "megabits")
+
+
+# PROBLEMA 3
+def latencia_real(latencia):
+    return latencia * 1.20
+
+print("\nPROBLEMA 3")
+print("a)", latencia_real(200), "ms")
+print("b)", latencia_real(149), "ms")
+print("c)", latencia_real(74), "ms")
+
+
+# PROBLEMA 4
+def cable_instalado(t):
+    return 1.85 * t
+
+print("\nPROBLEMA 4")
+
+tiempo_maximo = 6600 / 1.85
+
+print("Dominio: 0 <=", "t <=", round(tiempo_maximo, 2), "horas")
+
+print("148 horas:", cable_instalado(148), "km")
+print("148 horas:", cable_instalado(148) * 1000, "metros")
+
+print("2300 horas:", cable_instalado(2300), "km")
+print("2300 horas:", cable_instalado(2300) * 1000, "metros")
+
+horas_3480 = 3480 / 1.85
+print("Para 3480 km:", round(horas_3480, 2), "horas")
+
+print("Tiempo total:", round(tiempo_maximo, 2), "horas")
+
+
+# GRÁFICO
+tiempos = np.linspace(0, tiempo_maximo, 100)
+cable = cable_instalado(tiempos)
+
+plt.plot(tiempos, cable)
+plt.xlabel("Tiempo (horas)")
+plt.ylabel("Cable instalado (km)")
+plt.title("Instalación del cable de fibra óptica")
+plt.grid()
+plt.show()
